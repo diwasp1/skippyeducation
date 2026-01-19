@@ -1,0 +1,304 @@
+import Link from "next/link"
+import Image from "next/image"
+import { GraduationCap, Award, BookOpen, Plane, Home, Clock, Globe, BookMarked, Lightbulb } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { ServiceCard } from "@/components/service-card"
+import { TestimonialCard } from "@/components/testimonial-card"
+
+export default function HomePage() {
+  return (
+    <>
+      {/* Hero Section */}
+     {/* Hero Section */}
+<section className="relative h-[85vh] min-h-[600px] w-full overflow-hidden">
+  <Image
+    src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2000&auto=format&fit=crop"
+    alt="Sydney Opera House and Harbor"
+    fill
+    className="object-cover brightness-[1.1]"
+    priority
+  />
+
+  {/* Blue overlay */}
+  <div className="absolute inset-0 bg-gradient-to-b from-[#041e3a]/60 to-[#041e3a]/40 " />
+
+  {/* Content */}
+  <div className="absolute inset-0 flex items-end">
+    <div className="container pb-20 md:pb-28">
+      <div className="mx-auto max-w-4xl text-center">
+        <h1 className="text-2xl md:text-4xl  font-bold text-white leading-tight mb-4">
+          Your Journey to Australian Education Starts Here
+        </h1>
+
+        <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto">
+          Expert guidance for international students seeking quality education
+          and visa services in Australia.
+        </p>
+
+        {/* Buttons */}
+        <div className="flex justify-center gap-6">
+          <Link
+            href="/contact"
+            className="uppercase border-b-2 border-white text-white pb-1 text-md font-medium tracking-wide  hover:border-[#041e3a] transition"
+          >
+            Book Consultation
+          </Link>
+
+          <Link
+            href="/services"
+            className="uppercase border-b-2 border-white text-white pb-1 text-md font-medium tracking-wide  hover:border-[#041e3a] transition"
+          >
+            Explore Services
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      {/* About Section */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-gray-800">Skippy Education and Visa Services</h2>
+              <p className="text-lg mb-4 text-gray-700">
+                Skippy Education and Visa Services is a dedicated education and migration consultant agency focused on
+                connecting students with Australian education opportunities.
+              </p>
+              <p className="text-lg mb-6 text-gray-700">
+                With a team of certified education consultants and migration experts, we provide personalized guidance
+                to help you navigate the complexities of studying abroad. Our partnerships with leading Australian
+                institutions ensure you receive the best advice for your educational journey.
+              </p>
+              <Button asChild variant="default" size="lg" className="shadow-md">
+                <Link href="/about">Learn More About Us</Link>
+              </Button>
+            </div>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary hover:shadow-xl transition-shadow">
+                <Globe className="h-8 w-8 text-primary mb-3" />
+                <h3 className="font-semibold text-xl mb-2">Global Perspective</h3>
+                <p className="text-gray-600">International education experts with local Australian knowledge</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-secondary hover:shadow-xl transition-shadow">
+                <BookMarked className="h-8 w-8 text-secondary mb-3" />
+                <h3 className="font-semibold text-xl mb-2">Certified Advisors</h3>
+                <p className="text-gray-600">Qualified education and migration consultants</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary hover:shadow-xl transition-shadow">
+                <Lightbulb className="h-8 w-8 text-primary mb-3" />
+                <h3 className="font-semibold text-xl mb-2">Personalized Approach</h3>
+                <p className="text-gray-600">Tailored guidance for your unique educational goals</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-secondary hover:shadow-xl transition-shadow">
+                <Award className="h-8 w-8 text-secondary mb-3" />
+                <h3 className="font-semibold text-xl mb-2">Quality Partnerships</h3>
+                <p className="text-gray-600">Connected with leading Australian institutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">Our Services</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              We provide comprehensive education and visa consultancy services to help you achieve your dreams of
+              studying in Australia.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ServiceCard
+              title="Education Counseling"
+              description="Personalized guidance to help you choose the right course and university."
+              icon={GraduationCap}
+              href="/services/education-counseling"
+              color="primary"
+            />
+            <ServiceCard
+              title="University Admissions"
+              description="End-to-end assistance with university applications and admissions."
+              icon={BookOpen}
+              href="/services/university-admissions"
+              color="secondary"
+            />
+            <ServiceCard
+              title="Visa Application"
+              description="Expert guidance for student visa applications with high success rates."
+              icon={Plane}
+              href="/services/visa-application"
+              color="primary"
+            />
+            <ServiceCard
+              title="Scholarship Guidance"
+              description="Help you identify and apply for suitable scholarships and financial aid."
+              icon={Award}
+              href="/services/scholarship-guidance"
+              color="secondary"
+            />
+            <ServiceCard
+              title="Pre-Departure Briefing"
+              description="Comprehensive briefing to prepare you for life and study in Australia."
+              icon={Clock}
+              href="/services/pre-departure-briefing"
+              color="primary"
+            />
+            <ServiceCard
+              title="Accommodation"
+              description="Assistance in finding suitable accommodation options in Australia."
+              icon={Home}
+              href="/services/accommodation"
+              color="secondary"
+            />
+          </div>
+          <div className="text-center mt-10">
+            <Button asChild variant="secondary" size="lg" className="shadow-md">
+              <Link href="/services">View All Services</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Destinations Section */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">Popular Study Destinations</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Australia offers diverse study destinations, each with its unique lifestyle and educational opportunities.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="overflow-hidden rounded-xl shadow-lg group hover:shadow-xl transition-shadow">
+              <div className="relative h-60">
+                <Image
+                  src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=1920&h=1080&auto=format&fit=crop"
+                  alt="Sydney"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105 brightness-[1.1]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-2xl font-bold">Sydney</h3>
+                </div>
+              </div>
+              <div className="p-6 bg-white">
+                <p className="text-gray-600 mb-4">
+                  Australia's largest city offers a vibrant lifestyle, beautiful beaches, and world-renowned
+                  institutions like the University of Sydney and UNSW.
+                </p>
+                <Link href="/study-in-australia" className="text-primary font-medium hover:underline flex items-center">
+                  Learn more <span className="ml-1">→</span>
+                </Link>
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-xl shadow-lg group hover:shadow-xl transition-shadow">
+              <div className="relative h-60">
+                <Image
+                  src="https://images.unsplash.com/photo-1514395462725-fb4566210144?q=80&w=1920&h=1080&auto=format&fit=crop"
+                  alt="Melbourne"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105 brightness-[1.1]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-2xl font-bold">Melbourne</h3>
+                </div>
+              </div>
+              <div className="p-6 bg-white">
+                <p className="text-gray-600 mb-4">
+                  Known as Australia's cultural capital, Melbourne offers a rich arts scene, excellent coffee, and top
+                  institutions like the University of Melbourne.
+                </p>
+                <Link href="/study-in-australia" className="text-primary font-medium hover:underline flex items-center">
+                  Learn more <span className="ml-1">→</span>
+                </Link>
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-xl shadow-lg group hover:shadow-xl transition-shadow">
+              <div className="relative h-60">
+                <Image
+                  src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=1920&h=1080&auto=format&fit=crop"
+                  alt="Brisbane"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105 brightness-[1.1]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-2xl font-bold">Brisbane</h3>
+                </div>
+              </div>
+              <div className="p-6 bg-white">
+                <p className="text-gray-600 mb-4">
+                  Brisbane offers a subtropical climate, relaxed lifestyle, and quality education at institutions like
+                  the University of Queensland.
+                </p>
+                <Link href="/study-in-australia" className="text-primary font-medium hover:underline flex items-center">
+                  Learn more <span className="ml-1">→</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="text-center mt-10">
+            <Button asChild variant="outline" size="lg" className="shadow-md">
+              <Link href="/study-in-australia">Explore All Study Destinations</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">Why Choose Skippy Education</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              We're committed to providing exceptional service and support throughout your educational journey.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <TestimonialCard
+              content="Our personalized approach ensures that each student receives guidance tailored to their unique educational goals and career aspirations."
+              author="Personalized Guidance"
+              role="Our Commitment"
+              initials="PG"
+              color="primary"
+            />
+            <TestimonialCard
+              content="We maintain strong relationships with Australian universities and institutions to provide you with the most current and relevant information."
+              author="University Connections"
+              role="Our Network"
+              initials="UC"
+              color="secondary"
+            />
+            <TestimonialCard
+              content="From initial consultation to arrival in Australia, we provide comprehensive support at every step of your educational journey."
+              author="End-to-End Support"
+              role="Our Service"
+              initials="ES"
+              color="primary"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-[#041e3a] text-white">
+        <div className="container text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Start Your Australian Education Journey?</h2>
+          <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
+            Contact us today for a free consultation and take the first step towards your future in Australia.
+          </p>
+          <Button asChild size="xl" variant="white" className="shadow-lg">
+            <Link href="/contact">Book a Free Consultation</Link>
+          </Button>
+        </div>
+      </section>
+    </>
+  )
+}
