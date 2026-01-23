@@ -1,13 +1,14 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import BookingDialog from "./Cal.com";
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -22,32 +23,52 @@ export function Header() {
           />
         </Link>
         <nav className="hidden md:flex md:gap-8 lg:gap-12">
-          <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link
+            href="/"
+            className="text-sm font-medium transition-colors hover:text-primary">
             Home
           </Link>
-          <Link href="/about" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link
+            href="/about"
+            className="text-sm font-medium transition-colors hover:text-primary">
             About
           </Link>
-          <Link href="/services" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link
+            href="/services"
+            className="text-sm font-medium transition-colors hover:text-primary">
             Services
           </Link>
-          <Link href="/study-in-australia" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link
+            href="/study-in-australia"
+            className="text-sm font-medium transition-colors hover:text-primary">
             Study
           </Link>
-          <Link href="/visa-services" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link
+            href="/visa-services"
+            className="text-sm font-medium transition-colors hover:text-primary">
             Visa
           </Link>
-          <Link href="/contact" className="text-sm font-medium transition-colors hover:text-primary">
+          <Link
+            href="/contact"
+            className="text-sm font-medium transition-colors hover:text-primary">
             Contact
           </Link>
         </nav>
         <div className="hidden md:block">
+          <BookingDialog />
           <Button asChild>
             <Link href="/contact">Book a Consultation</Link>
           </Button>
         </div>
-        <button className="block md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
-          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        <button
+          className="block md:hidden"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu">
+          {isMenuOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
         </button>
       </div>
       {isMenuOpen && (
@@ -56,45 +77,40 @@ export function Header() {
             <Link
               href="/"
               className="text-sm font-medium transition-colors hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
-            >
+              onClick={() => setIsMenuOpen(false)}>
               Home
             </Link>
             <Link
               href="/about"
               className="text-sm font-medium transition-colors hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
-            >
+              onClick={() => setIsMenuOpen(false)}>
               About
             </Link>
             <Link
               href="/services"
               className="text-sm font-medium transition-colors hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
-            >
+              onClick={() => setIsMenuOpen(false)}>
               Services
             </Link>
             <Link
               href="/study-in-australia"
               className="text-sm font-medium transition-colors hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
-            >
+              onClick={() => setIsMenuOpen(false)}>
               Study
             </Link>
             <Link
               href="/visa-services"
               className="text-sm font-medium transition-colors hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
-            >
+              onClick={() => setIsMenuOpen(false)}>
               Visa
             </Link>
             <Link
               href="/contact"
               className="text-sm font-medium transition-colors hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
-            >
+              onClick={() => setIsMenuOpen(false)}>
               Contact
             </Link>
+
             <Button asChild className="w-full">
               <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
                 Book a Consultation
@@ -104,5 +120,5 @@ export function Header() {
         </div>
       )}
     </header>
-  )
+  );
 }
