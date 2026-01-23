@@ -34,8 +34,6 @@ export default function BookingDialog({
   const [view, setView] = useState<"standard" | "afterhour">("standard");
   const [isLoading, setIsLoading] = useState(true);
 
-  console.log("isScrolled in BookingDialog:", isScrolled);
-
   useEffect(() => {
     (async () => {
       const cal = await getCalApi();

@@ -9,7 +9,7 @@ import {
   Instagram,
   Linkedin,
 } from "lucide-react";
-import { ContactForm } from "@/components/contact-form";
+import ConsultationForm from "@/components/contact-form";
 
 export default function ContactPage() {
   return (
@@ -56,7 +56,7 @@ export default function ContactPage() {
                 consultation? Fill out the form, and our team will get back to
                 you as soon as possible.
               </p>
-              <ContactForm />
+              <ConsultationForm />
             </div>
             <div>
               <div className="bg-gray-50 p-8 rounded-lg shadow-md h-full">

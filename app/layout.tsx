@@ -5,7 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/improved-header";
 import { Footer } from "@/components/footer";
-import BookFreeConsultationFooter from "@/components/BookFreeConsultationFooter";
+import { ToastContainer } from "react-toastify";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -39,6 +39,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        <ToastContainer />
       </body>
     </html>
   );
