@@ -25,7 +25,6 @@ import {
 } from "@/components/ui/select";
 import { toast } from "react-toastify";
 
-// 1. Define the Schema
 const formSchema = z.object({
   access_key: z.string(),
   firstName: z.string().min(2, "First name is required"),
@@ -221,14 +220,14 @@ export default function ConsultationForm() {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-secondary text-white hover:bg-secondary/90">
+            className="w-full bg-primary text-white hover:bg-secondary/90">
             {isSubmitting ? "Submitting..." : "Submit"}
           </Button>
 
           <Button
             type="button"
             variant="outline"
-            className="w-full"
+            className="w-full bg-secondary text-white"
             onClick={() => form.reset()}>
             Cancel
           </Button>
