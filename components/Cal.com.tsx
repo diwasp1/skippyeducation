@@ -13,13 +13,29 @@ import { Loader2 } from "lucide-react"; // Assuming you use lucide-react (standa
 import { ScrollArea } from "./ui/scroll-area";
 
 export default function BookingDialog({
+  btnVarient = "ghost",
   noButton = false,
+  isScrolled = false,
+  btnText = "Book Consultation",
 }: {
+  btnVarient?:
+    | "primary"
+    | "destructive"
+    | "outline"
+    | "secondary"
+    | "ghost"
+    | "link"
+    | "white"
+    | "cancel";
   noButton?: boolean;
+  isScrolled?: boolean;
+  btnText?: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [view, setView] = useState<"standard" | "afterhour">("standard");
   const [isLoading, setIsLoading] = useState(true);
+
+  console.log("isScrolled in BookingDialog:", isScrolled);
 
   useEffect(() => {
     (async () => {
@@ -48,17 +64,17 @@ export default function BookingDialog({
     <>
       {!noButton ? (
         <Button
-          variant={"ghost"}
+          variant={btnVarient}
           onClick={() => {
             handleSwitchView("standard");
             setIsOpen(true);
           }}
-          className="text-lg text-white">
-          Book Consultation
+          className={`text-lg ${btnVarient ? "" : isScrolled ? "text-primary" : "text-white"} transition-colors `}>
+          {btnText}
         </Button>
       ) : (
         <p
-          className={`uppercase border-b-2 cursor-pointer border-white text-white pb-1 text-md font-medium tracking-wide hover:text-primary  hover:border-primary hover:font-bold transition`}
+          className={`uppercase border-b-2 cursor-pointer border-white text-white pb-1 text-md font-medium tracking-wide hover:font-bold  transition-all duration-100`}
           onClick={() => {
             handleSwitchView("standard");
             setIsOpen(true);
@@ -95,11 +111,11 @@ export default function BookingDialog({
             <div className="flex w-full max-w-full bg-slate-50 rounded-md ">
               <Cal
                 calLink="skippyeducation/afterhourmeeting"
-                style={{ width: "90%", height: "100%", minWidth: "90%" }}
+                style={{ width: "100%", height: "100%", minWidth: "100%" }}
                 onLoad={(e) => console.log("loaded", e)}
                 config={{
                   theme: "light",
-                  layout: "month_view", // month_view is better for narrow screens
+                  layout: "month_view",
                 }}
               />
             </div>

@@ -11,10 +11,51 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import BookingDialog from "./Cal.com";
+import { usePathname, useRouter } from "next/navigation";
+
+const navLink = ({
+  href,
+  text,
+  active,
+}: {
+  href: string;
+  text: string;
+  active: boolean;
+}) => {
+  return (
+    <Link
+      href={href}
+      className={`text-sm font-medium uppercase tracking-wide transition-colors pb-1 hover:text-secondary ${active ? "border-b-2 border-primary " : ""}`}>
+      {text}
+    </Link>
+  );
+};
+
+const linkData = [
+  {
+    href: "/our-story",
+    text: "Our Story",
+  },
+  {
+    href: "/services",
+    text: "Services",
+  },
+  {
+    href: "/study-in-australia",
+    text: "Storybook",
+  },
+  {
+    href: "/contact",
+    text: "Contact Us",
+  },
+];
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+
+  console.log("Current pathname:", pathname);
 
   // Track scroll
   useEffect(() => {
@@ -29,45 +70,30 @@ export function Header() {
     <header
       className={`
         w-full top-0 left-0 z-50 transition-all duration-300
-        ${isScrolled ? "fixed bg-white text-[#041e3a] shadow-md" : "absolute text-white"}
+        ${isScrolled ? "fixed bg-white text-primary shadow-md" : "absolute text-white"}
       `}>
       <div className="container flex h-20 items-center justify-between">
         <Link href="/">
           <img
-            src={isScrolled ? "/images/logo6.png" : "/images/logo4.png"}
+            src={isScrolled ? "/images/logo4.png" : "/images/logo6.png"}
             alt="Skippy Education and Visa Services"
             className="h-14 w-auto cursor-pointer transition-all duration-300 "
           />
         </Link>
 
         <nav className="hidden lg:flex lg:items-center lg:gap-8 lg:gap-10">
-          <Link
-            href="/about"
-            className="text-sm font-medium uppercase tracking-wide transition-colors hover:text-primary">
-            Our Story
-          </Link>
-          <Link
-            href="/services"
-            className="text-sm font-medium uppercase tracking-wide transition-colors hover:text-primary">
-            Services
-          </Link>
-
-          <Link
-            href="/study-in-australia"
-            className="text-sm font-medium uppercase tracking-wide transition-colors hover:text-primary">
-            Storybook
-          </Link>
-
-          <Link
-            href="/contact"
-            className="text-sm font-medium uppercase tracking-wide transition-colors hover:text-primary">
-            Contact Us
-          </Link>
+          {linkData.map((link) =>
+            navLink({
+              href: link.href,
+              text: link.text,
+              active: pathname.startsWith(link.href),
+            }),
+          )}
         </nav>
 
         <div className="flex items-center gap-4">
           <div className="hidden lg:block">
-            <BookingDialog />
+            <BookingDialog isScrolled={isScrolled} />
           </div>
           <button
             className="block lg:hidden"

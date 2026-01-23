@@ -17,6 +17,7 @@ import { TestimonialCard } from "@/components/testimonial-card";
 import BookingDialog from "@/components/Cal.com";
 import ReusuableButton from "@/components/ReusuableButton";
 import ReusuableLinkButton from "@/components/ReusuableButton";
+import BookFreeConsultationFooter from "@/components/BookFreeConsultationFooter";
 
 export default function HomePage() {
   return (
@@ -338,21 +339,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-[#041e3a] text-white">
-        <div className="container text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Ready to Start Your Australian Education Journey?
-          </h2>
-          <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
-            Contact us today for a free consultation and take the first step
-            towards your future in Australia.
-          </p>
-          <Button asChild size="xl" variant="white" className="shadow-lg">
-            <Link href="/contact">Book a Free Consultation</Link>
-          </Button>
-        </div>
-      </section>
+      <BookFreeConsultationFooter />
     </>
   );
 }

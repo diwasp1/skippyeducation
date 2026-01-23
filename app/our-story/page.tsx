@@ -1,43 +1,41 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { CheckCircle, Users, Trophy, Target } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { CheckCircle, Users, Trophy, Target } from "lucide-react";
+import BookingDialog from "@/components/Cal.com";
 
 export default function AboutPage() {
   return (
     <>
+      {/* Hero Section */}
+      <section className="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2000&auto=format&fit=crop"
+          alt="Sydney Opera House and Harbor"
+          fill
+          className="object-cover brightness-[1.1]"
+          priority
+        />
 
+        {/* Blue overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#041e3a]/60 to-[#041e3a]/40 " />
 
-         {/* Hero Section */}
-<section className="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
-  <Image
-    src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2000&auto=format&fit=crop"
-    alt="Sydney Opera House and Harbor"
-    fill
-    className="object-cover brightness-[1.1]"
-    priority
-  />
+        {/* Content */}
+        <div className="absolute inset-0 flex items-end">
+          <div className="container pb-20 md:pb-28">
+            <div className="mx-auto max-w-4xl text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                About Skippy Education
+              </h1>
 
-  {/* Blue overlay */}
-  <div className="absolute inset-0 bg-gradient-to-b from-[#041e3a]/60 to-[#041e3a]/40 " />
-
-  {/* Content */}
-  <div className="absolute inset-0 flex items-end">
-    <div className="container pb-20 md:pb-28">
-      <div className="mx-auto max-w-4xl text-center">
-      <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">About Skippy Education</h1>
-
-        <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto">
-        Your trusted partner for education and visa consultancy services in Australia.
-        </p>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
+              <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto">
+                Your trusted partner for education and visa consultancy services
+                in Australia.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Our Story Section */}
       <section className="py-16 bg-white">
@@ -54,18 +52,30 @@ export default function AboutPage() {
             </div>
             <div>
               <h2 className="text-3xl font-bold mb-4">Our Story</h2>
-              <h3 className="text-xl font-bold mb-2">A considered approach to education guidance.</h3>
+              <h3 className="text-xl font-bold mb-2">
+                A considered approach to education guidance.
+              </h3>
               <p className="text-gray-600 mb-4">
-              Skippy Education was founded to offer students something different — calm, honest, and personalised guidance in a space often filled with complexity.
+                Skippy Education was founded to offer students something
+                different — calm, honest, and personalised guidance in a space
+                often filled with complexity.
               </p>
               <p className="text-gray-600 mb-4">
-              We take the time to understand your academic background, personal goals, and long-term plans before recommending any pathway. Every student’s journey is different, and we believe the advice should be too.
+                We take the time to understand your academic background,
+                personal goals, and long-term plans before recommending any
+                pathway. Every student’s journey is different, and we believe
+                the advice should be too.
               </p>
               <p className="text-gray-600 mb-4">
-              Our focus is not volume — it is quality, trust, and long-term success.
+                Our focus is not volume — it is quality, trust, and long-term
+                success.
               </p>
               <div className="mt-6">
-                  <Link href="/contact "  className="uppercase border-b-2 border-[#041e3a] text-[#041e3a]  pb-1 text-md font-medium tracking-wide  hover:border-[#041e3a] transition">Begin with a conversation</Link>
+                <Link
+                  href="/contact "
+                  className="uppercase border-b-2 border-[#041e3a] text-[#041e3a]  pb-1 text-md font-medium tracking-wide  hover:border-[#041e3a] transition">
+                  Begin with a conversation
+                </Link>
               </div>
             </div>
           </div>
@@ -82,21 +92,28 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
               <p className="text-gray-600 mb-4">
-                To empower international students with the knowledge, resources, and support they need to successfully
-                pursue higher education in Australia and achieve their career goals.
+                To empower international students with the knowledge, resources,
+                and support they need to successfully pursue higher education in
+                Australia and achieve their career goals.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span className="text-gray-600">Provide honest and transparent guidance</span>
+                  <span className="text-gray-600">
+                    Provide honest and transparent guidance
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span className="text-gray-600">Simplify complex application processes</span>
+                  <span className="text-gray-600">
+                    Simplify complex application processes
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span className="text-gray-600">Maximize student success rates</span>
+                  <span className="text-gray-600">
+                    Maximize student success rates
+                  </span>
                 </li>
               </ul>
             </div>
@@ -106,21 +123,28 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
               <p className="text-gray-600 mb-4">
-                To be the most trusted education and visa consultancy for international students seeking to study in
-                Australia, known for our integrity, expertise, and student-centered approach.
+                To be the most trusted education and visa consultancy for
+                international students seeking to study in Australia, known for
+                our integrity, expertise, and student-centered approach.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span className="text-gray-600">Set the industry standard for ethical practices</span>
+                  <span className="text-gray-600">
+                    Set the industry standard for ethical practices
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span className="text-gray-600">Build a global network of successful alumni</span>
+                  <span className="text-gray-600">
+                    Build a global network of successful alumni
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span className="text-gray-600">Continuously innovate our service offerings</span>
+                  <span className="text-gray-600">
+                    Continuously innovate our service offerings
+                  </span>
                 </li>
               </ul>
             </div>
@@ -197,28 +221,38 @@ export default function AboutPage() {
                 <Users className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-2">Student-Centered</h3>
-              <p className="text-gray-600">We put students' needs and goals at the center of everything we do.</p>
+              <p className="text-gray-600">
+                We put students' needs and goals at the center of everything we
+                do.
+              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-2">Integrity</h3>
-              <p className="text-gray-600">We operate with honesty, transparency, and ethical practices.</p>
+              <p className="text-gray-600">
+                We operate with honesty, transparency, and ethical practices.
+              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <Trophy className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-2">Excellence</h3>
-              <p className="text-gray-600">We strive for excellence in all our services and interactions.</p>
+              <p className="text-gray-600">
+                We strive for excellence in all our services and interactions.
+              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <Target className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-2">Innovation</h3>
-              <p className="text-gray-600">We continuously improve our services to meet evolving student needs.</p>
+              <p className="text-gray-600">
+                We continuously improve our services to meet evolving student
+                needs.
+              </p>
             </div>
           </div>
         </div>
@@ -227,15 +261,16 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-16 bg-primary text-white">
         <div className="container text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Start Your Australian Education Journey?</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Start Your Australian Education Journey?
+          </h2>
           <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
-            Contact us today for a free consultation and take the first step towards your future in Australia.
+            Contact us today for a free consultation and take the first step
+            towards your future in Australia.
           </p>
-          <Button asChild size="lg" variant="white" className="shadow-md">
-            <Link href="/contact">Book a Free Consultation</Link>
-          </Button>
+          <BookingDialog btnVarient="white" />
         </div>
       </section>
     </>
-  )
+  );
 }
