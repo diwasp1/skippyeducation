@@ -29,7 +29,7 @@ export function Header() {
             Home
           </Link>
           <Link
-            href="/about"
+            href="/our-story"
             className="text-sm font-medium transition-colors hover:text-primary">
             About
           </Link>

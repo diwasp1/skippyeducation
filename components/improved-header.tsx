@@ -115,7 +115,7 @@ export function Header() {
           } backdrop-blur-sm`}>
           <div className="flex flex-col space-y-3 py-4">
             <Link
-              href="/about"
+              href="/our-story"
               className="text-sm font-medium uppercase tracking-wide transition-colors hover:text-[#041e3a]"
               onClick={() => setIsMenuOpen(false)}>
               Our Story
