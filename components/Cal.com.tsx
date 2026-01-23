@@ -9,7 +9,6 @@ import {
 import { Button } from "@/components/ui/button";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect, useState } from "react";
-import { Loader2 } from "lucide-react"; // Assuming you use lucide-react (standard with shadcn)
 import { ScrollArea } from "./ui/scroll-area";
 
 export default function BookingDialog({
