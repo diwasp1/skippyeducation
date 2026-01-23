@@ -1,61 +1,77 @@
-import Link from "next/link"
-import Image from "next/image"
-import { GraduationCap, Award, BookOpen, Plane, Home, Clock, FileText, Globe, Lightbulb } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { ServiceCard } from "@/components/service-card"
-import { studentsStudyingImage, graduationImage, campusImage } from "../images"
+import {
+  GraduationCap,
+  Award,
+  BookOpen,
+  Plane,
+  Home,
+  Clock,
+  FileText,
+  Globe,
+  Lightbulb,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ServiceCard } from "@/components/service-card";
+import { studentsStudyingImage, graduationImage, campusImage } from "../images";
+import BookFreeConsultationFooter from "@/components/BookFreeConsultationFooter";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function ServicesPage() {
   return (
     <>
+      {/* Hero Section */}
+      <section className="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2000&auto=format&fit=crop"
+          alt="Sydney Opera House and Harbor"
+          fill
+          className="object-cover brightness-[1.1]"
+          priority
+        />
 
-               {/* Hero Section */}
-<section className="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
-  <Image
-    src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2000&auto=format&fit=crop"
-    alt="Sydney Opera House and Harbor"
-    fill
-    className="object-cover brightness-[1.1]"
-    priority
-  />
+        {/* Blue overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#041e3a]/60 to-[#041e3a]/40 " />
 
-  {/* Blue overlay */}
-  <div className="absolute inset-0 bg-gradient-to-b from-[#041e3a]/60 to-[#041e3a]/40 " />
+        {/* Content */}
+        <div className="absolute inset-0 flex items-end">
+          <div className="container pb-20 md:pb-28">
+            <div className="mx-auto max-w-4xl text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Our Services
+              </h1>
 
-  {/* Content */}
-  <div className="absolute inset-0 flex items-end">
-    <div className="container pb-20 md:pb-28">
-      <div className="mx-auto max-w-4xl text-center">
-      <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Our Services</h1>
-
-        <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto">
-        Comprehensive education and visa consultancy services to help you achieve your dreams of studying in
-              Australia.
-        </p>
-
-      </div>
-    </div>
-  </div>
-</section>
-
+              <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto">
+                Comprehensive education and visa consultancy services to help
+                you achieve your dreams of studying in Australia.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Services Overview */}
       <section className="py-16 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Comprehensive Student Services</h2>
+              <h2 className="text-3xl font-bold mb-6">
+                Comprehensive Student Services
+              </h2>
               <p className="text-gray-600 mb-4">
-                At Skippy Education, we understand that studying abroad is a significant decision. That's why we offer a
-                complete range of services designed to support you at every step of your educational journey.
+                At Skippy Education, we understand that studying abroad is a
+                significant decision. That's why we offer a complete range of
+                services designed to support you at every step of your
+                educational journey.
               </p>
               <p className="text-gray-600 mb-4">
-                Our team of education consultants works closely with you to understand your academic background, career
-                aspirations, and personal preferences to provide tailored guidance and support.
+                Our team of education consultants works closely with you to
+                understand your academic background, career aspirations, and
+                personal preferences to provide tailored guidance and support.
               </p>
               <p className="text-gray-600 mb-4">
-                From choosing the right course and university to helping with visa applications and pre-departure
-                preparations, we're with you every step of the way.
+                From choosing the right course and university to helping with
+                visa applications and pre-departure preparations, we're with you
+                every step of the way.
               </p>
             </div>
             <div className="relative rounded-lg overflow-hidden shadow-lg">
@@ -72,7 +88,8 @@ export default function ServicesPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Service Offerings</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Explore our comprehensive range of services designed to support your educational journey in Australia.
+              Explore our comprehensive range of services designed to support
+              your educational journey in Australia.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -141,33 +158,42 @@ export default function ServicesPage() {
             <div className="order-2 lg:order-1">
               <h2 className="text-3xl font-bold mb-6">Education Counseling</h2>
               <p className="text-gray-600 mb-4">
-                Our education counseling service is the foundation of your journey to study in Australia. We provide
-                personalized guidance to help you make informed decisions about your education.
+                Our education counseling service is the foundation of your
+                journey to study in Australia. We provide personalized guidance
+                to help you make informed decisions about your education.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-primary text-xs">✓</span>
                   </div>
-                  <span className="text-gray-600">Assessment of academic background and career goals</span>
+                  <span className="text-gray-600">
+                    Assessment of academic background and career goals
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-primary text-xs">✓</span>
                   </div>
-                  <span className="text-gray-600">Course and university recommendations</span>
+                  <span className="text-gray-600">
+                    Course and university recommendations
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-primary text-xs">✓</span>
                   </div>
-                  <span className="text-gray-600">Information on admission requirements</span>
+                  <span className="text-gray-600">
+                    Information on admission requirements
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-primary text-xs">✓</span>
                   </div>
-                  <span className="text-gray-600">Guidance on English language requirements</span>
+                  <span className="text-gray-600">
+                    Guidance on English language requirements
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-0.5">
@@ -211,27 +237,34 @@ export default function ServicesPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6">University Admissions</h2>
               <p className="text-gray-600 mb-4">
-                Our university admissions service takes the stress out of the application process. We provide end-to-end
-                assistance to ensure your applications are submitted correctly and on time.
+                Our university admissions service takes the stress out of the
+                application process. We provide end-to-end assistance to ensure
+                your applications are submitted correctly and on time.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-primary text-xs">✓</span>
                   </div>
-                  <span className="text-gray-600">Document preparation and verification</span>
+                  <span className="text-gray-600">
+                    Document preparation and verification
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-primary text-xs">✓</span>
                   </div>
-                  <span className="text-gray-600">Application submission to multiple universities</span>
+                  <span className="text-gray-600">
+                    Application submission to multiple universities
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-primary text-xs">✓</span>
                   </div>
-                  <span className="text-gray-600">Follow-up with universities</span>
+                  <span className="text-gray-600">
+                    Follow-up with universities
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-0.5">
@@ -243,7 +276,9 @@ export default function ServicesPage() {
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-primary text-xs">✓</span>
                   </div>
-                  <span className="text-gray-600">Acceptance and enrollment assistance</span>
+                  <span className="text-gray-600">
+                    Acceptance and enrollment assistance
+                  </span>
                 </li>
               </ul>
               <div className="mt-6">
@@ -262,8 +297,8 @@ export default function ServicesPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Process</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              We follow a structured approach to ensure you receive the best guidance and support throughout your
-              journey.
+              We follow a structured approach to ensure you receive the best
+              guidance and support throughout your journey.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -271,9 +306,12 @@ export default function ServicesPage() {
               <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">
                 1
               </div>
-              <h3 className="text-xl font-bold mb-3 mt-2">Initial Consultation</h3>
+              <h3 className="text-xl font-bold mb-3 mt-2">
+                Initial Consultation
+              </h3>
               <p className="text-gray-600 mb-4">
-                We understand your academic background, career goals, and preferences to provide personalized guidance.
+                We understand your academic background, career goals, and
+                preferences to provide personalized guidance.
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-start">
@@ -300,9 +338,12 @@ export default function ServicesPage() {
               <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">
                 2
               </div>
-              <h3 className="text-xl font-bold mb-3 mt-2">Course & University Selection</h3>
+              <h3 className="text-xl font-bold mb-3 mt-2">
+                Course & University Selection
+              </h3>
               <p className="text-gray-600 mb-4">
-                We help you choose the right course and university based on your academic background and career goals.
+                We help you choose the right course and university based on your
+                academic background and career goals.
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-start">
@@ -329,9 +370,12 @@ export default function ServicesPage() {
               <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">
                 3
               </div>
-              <h3 className="text-xl font-bold mb-3 mt-2">Application & Admission</h3>
+              <h3 className="text-xl font-bold mb-3 mt-2">
+                Application & Admission
+              </h3>
               <p className="text-gray-600 mb-4">
-                We assist with preparing and submitting applications to your chosen universities.
+                We assist with preparing and submitting applications to your
+                chosen universities.
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-start">
@@ -358,9 +402,12 @@ export default function ServicesPage() {
               <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">
                 4
               </div>
-              <h3 className="text-xl font-bold mb-3 mt-2">Visa & Pre-Departure</h3>
+              <h3 className="text-xl font-bold mb-3 mt-2">
+                Visa & Pre-Departure
+              </h3>
               <p className="text-gray-600 mb-4">
-                We guide you through the visa application process and prepare you for your journey to Australia.
+                We guide you through the visa application process and prepare
+                you for your journey to Australia.
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-start">
@@ -391,42 +438,60 @@ export default function ServicesPage() {
       <section className="py-16 bg-white">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              Frequently Asked Questions
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Find answers to common questions about our services and studying in Australia.
+              Find answers to common questions about our services and studying
+              in Australia.
             </p>
           </div>
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">Do you charge for your services?</h3>
+              <h3 className="text-xl font-bold mb-2">
+                Do you charge for your services?
+              </h3>
               <p className="text-gray-600">
-                Most of our education counseling and university application services are provided at no cost to
-                students. We receive commissions from our partner universities. However, some specialized services like
-                visa application assistance may have associated fees, which we will clearly communicate upfront.
+                Most of our education counseling and university application
+                services are provided at no cost to students. We receive
+                commissions from our partner universities. However, some
+                specialized services like visa application assistance may have
+                associated fees, which we will clearly communicate upfront.
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">How do I get started with your services?</h3>
+              <h3 className="text-xl font-bold mb-2">
+                How do I get started with your services?
+              </h3>
               <p className="text-gray-600">
-                Getting started is easy! Simply book a free initial consultation through our website or by contacting
-                our office. During this consultation, we'll discuss your educational background, career goals, and
-                preferences to provide personalized guidance.
+                Getting started is easy! Simply book a free initial consultation
+                through our website or by contacting our office. During this
+                consultation, we'll discuss your educational background, career
+                goals, and preferences to provide personalized guidance.
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">Which universities do you work with?</h3>
+              <h3 className="text-xl font-bold mb-2">
+                Which universities do you work with?
+              </h3>
               <p className="text-gray-600">
-                We work with a wide range of universities and institutions across Australia, including top-ranked
-                universities and specialized institutions. Our partnerships allow us to provide you with the most
-                up-to-date information and support for your applications.
+                We work with a wide range of universities and institutions
+                across Australia, including top-ranked universities and
+                specialized institutions. Our partnerships allow us to provide
+                you with the most up-to-date information and support for your
+                applications.
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-2">How long does the entire process take?</h3>
+              <h3 className="text-xl font-bold mb-2">
+                How long does the entire process take?
+              </h3>
               <p className="text-gray-600">
-                The timeline varies depending on your specific circumstances, the courses you're applying for, and visa
-                processing times. Generally, we recommend starting the process at least 6-8 months before your intended
-                start date to allow sufficient time for applications, visa processing, and pre-departure preparations.
+                The timeline varies depending on your specific circumstances,
+                the courses you're applying for, and visa processing times.
+                Generally, we recommend starting the process at least 6-8 months
+                before your intended start date to allow sufficient time for
+                applications, visa processing, and pre-departure preparations.
               </p>
             </div>
           </div>
@@ -438,18 +503,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-primary text-white">
-        <div className="container text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Start Your Australian Education Journey?</h2>
-          <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
-            Contact us today for a free consultation and take the first step towards your future in Australia.
-          </p>
-          <Button asChild size="lg" variant="white" className="shadow-md">
-            <Link href="/contact">Book a Free Consultation</Link>
-          </Button>
-        </div>
-      </section>
+      <BookFreeConsultationFooter />
     </>
-  )
+  );
 }

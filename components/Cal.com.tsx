@@ -69,7 +69,7 @@ export default function BookingDialog({
             handleSwitchView("standard");
             setIsOpen(true);
           }}
-          className={`text-lg ${btnVarient ? "" : isScrolled ? "text-primary" : "text-white"} transition-colors `}>
+          className={`text-lg ${btnVarient ? "" : isScrolled ? "text-primary" : "text-white"} transition-all  hover:scale-105 duration-200`}>
           {btnText}
         </Button>
       ) : (

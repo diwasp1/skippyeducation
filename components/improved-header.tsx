@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
@@ -11,9 +10,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import BookingDialog from "./Cal.com";
-import { usePathname, useRouter } from "next/navigation";
-
-const navLink = ({
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+const NavLink = ({
   href,
   text,
   active,
@@ -82,13 +81,14 @@ export function Header() {
         </Link>
 
         <nav className="hidden lg:flex lg:items-center lg:gap-8 lg:gap-10">
-          {linkData.map((link) =>
-            navLink({
-              href: link.href,
-              text: link.text,
-              active: pathname.startsWith(link.href),
-            }),
-          )}
+          {linkData.map((link) => (
+            <NavLink
+              key={link.href}
+              href={link.href}
+              text={link.text}
+              active={pathname.startsWith(link.href)}
+            />
+          ))}
         </nav>
 
         <div className="flex items-center gap-4">

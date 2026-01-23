@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Users, Trophy, Target } from "lucide-react";
 import BookingDialog from "@/components/Cal.com";
+import BookFreeConsultationFooter from "@/components/BookFreeConsultationFooter";
 
 export default function AboutPage() {
   return (
@@ -255,20 +256,6 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-primary text-white">
-        <div className="container text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Ready to Start Your Australian Education Journey?
-          </h2>
-          <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
-            Contact us today for a free consultation and take the first step
-            towards your future in Australia.
-          </p>
-          <BookingDialog btnVarient="white" />
         </div>
       </section>
     </>

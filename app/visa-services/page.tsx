@@ -1,7 +1,8 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { CheckCircle, Plane, Award, Users } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { CheckCircle, Plane, Award, Users } from "lucide-react";
+import BookFreeConsultationFooter from "@/components/BookFreeConsultationFooter";
 
 export default function VisaServicesPage() {
   return (
@@ -19,9 +20,12 @@ export default function VisaServicesPage() {
         <div className="absolute inset-0 flex items-center">
           <div className="container">
             <div className="max-w-2xl">
-              <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">Visa Services</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+                Visa Services
+              </h1>
               <p className="text-xl text-white/90 max-w-xl">
-                Expert guidance for Australian student visa applications with high success rates.
+                Expert guidance for Australian student visa applications with
+                high success rates.
               </p>
             </div>
           </div>
@@ -33,37 +37,51 @@ export default function VisaServicesPage() {
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-gray-800">Australian Student Visa</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gray-800">
+                Australian Student Visa
+              </h2>
               <p className="text-gray-600 mb-4">
-                The Student visa (subclass 500) allows you to stay in Australia for up to 5 years to study full-time at
-                an educational institution. At Skippy Education, we provide comprehensive guidance throughout the visa
-                application process.
+                The Student visa (subclass 500) allows you to stay in Australia
+                for up to 5 years to study full-time at an educational
+                institution. At Skippy Education, we provide comprehensive
+                guidance throughout the visa application process.
               </p>
               <p className="text-gray-600 mb-4">
-                Our team of experienced visa specialists has a proven track record of successful visa applications. We
-                understand the complexities of the Australian visa system and can help you navigate the process with
-                ease.
+                Our team of experienced visa specialists has a proven track
+                record of successful visa applications. We understand the
+                complexities of the Australian visa system and can help you
+                navigate the process with ease.
               </p>
               <div className="space-y-3 mt-6">
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span className="text-gray-600">Expert guidance throughout the process</span>
+                  <span className="text-gray-600">
+                    Expert guidance throughout the process
+                  </span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span className="text-gray-600">Document verification and preparation</span>
+                  <span className="text-gray-600">
+                    Document verification and preparation
+                  </span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span className="text-gray-600">Visa interview preparation</span>
+                  <span className="text-gray-600">
+                    Visa interview preparation
+                  </span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span className="text-gray-600">Regular application status updates</span>
+                  <span className="text-gray-600">
+                    Regular application status updates
+                  </span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                  <span className="text-gray-600">Post-visa guidance and support</span>
+                  <span className="text-gray-600">
+                    Post-visa guidance and support
+                  </span>
                 </div>
               </div>
               <div className="mt-8">
@@ -89,9 +107,12 @@ export default function VisaServicesPage() {
       <section className="py-20 bg-gray-50">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">Types of Student Visas</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">
+              Types of Student Visas
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              We provide guidance for various types of Australian visas based on your educational goals.
+              We provide guidance for various types of Australian visas based on
+              your educational goals.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -99,10 +120,13 @@ export default function VisaServicesPage() {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <Plane className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Student Visa (Subclass 500)</h3>
+              <h3 className="text-xl font-bold mb-3">
+                Student Visa (Subclass 500)
+              </h3>
               <p className="text-gray-600 mb-4">
-                The main visa for international students studying full-time in Australia. It allows you to stay for up
-                to 5 years and work part-time during your studies.
+                The main visa for international students studying full-time in
+                Australia. It allows you to stay for up to 5 years and work
+                part-time during your studies.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start">
@@ -129,10 +153,13 @@ export default function VisaServicesPage() {
               <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4">
                 <Users className="h-6 w-6 text-secondary" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Student Guardian Visa (Subclass 590)</h3>
+              <h3 className="text-xl font-bold mb-3">
+                Student Guardian Visa (Subclass 590)
+              </h3>
               <p className="text-gray-600 mb-4">
-                For guardians of international students under 18 years of age. It allows you to stay in Australia as the
-                guardian of a student visa holder.
+                For guardians of international students under 18 years of age.
+                It allows you to stay in Australia as the guardian of a student
+                visa holder.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start">
@@ -159,10 +186,12 @@ export default function VisaServicesPage() {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <Award className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Temporary Graduate Visa (Subclass 485)</h3>
+              <h3 className="text-xl font-bold mb-3">
+                Temporary Graduate Visa (Subclass 485)
+              </h3>
               <p className="text-gray-600 mb-4">
-                For international students who have completed their studies in Australia and want to gain work
-                experience.
+                For international students who have completed their studies in
+                Australia and want to gain work experience.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start">
@@ -193,9 +222,12 @@ export default function VisaServicesPage() {
       <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">Visa Application Process</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">
+              Visa Application Process
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our streamlined process ensures a smooth visa application experience.
+              Our streamlined process ensures a smooth visa application
+              experience.
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -209,10 +241,13 @@ export default function VisaServicesPage() {
                     </div>
                   </div>
                   <div className="md:col-span-6 bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary">
-                    <h3 className="text-xl font-bold mb-3">Initial Assessment</h3>
+                    <h3 className="text-xl font-bold mb-3">
+                      Initial Assessment
+                    </h3>
                     <p className="text-gray-600">
-                      We assess your eligibility for an Australian student visa based on your educational background,
-                      financial capacity, and other relevant factors.
+                      We assess your eligibility for an Australian student visa
+                      based on your educational background, financial capacity,
+                      and other relevant factors.
                     </p>
                   </div>
                 </div>
@@ -223,10 +258,13 @@ export default function VisaServicesPage() {
                     </div>
                   </div>
                   <div className="md:col-span-6 bg-white p-6 rounded-xl shadow-lg border-l-4 border-secondary">
-                    <h3 className="text-xl font-bold mb-3">Document Preparation</h3>
+                    <h3 className="text-xl font-bold mb-3">
+                      Document Preparation
+                    </h3>
                     <p className="text-gray-600">
-                      We guide you in preparing all required documents, including financial statements, health
-                      insurance, and confirmation of enrollment (CoE).
+                      We guide you in preparing all required documents,
+                      including financial statements, health insurance, and
+                      confirmation of enrollment (CoE).
                     </p>
                   </div>
                 </div>
@@ -237,10 +275,12 @@ export default function VisaServicesPage() {
                     </div>
                   </div>
                   <div className="md:col-span-6 bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary">
-                    <h3 className="text-xl font-bold mb-3">Visa Application Submission</h3>
+                    <h3 className="text-xl font-bold mb-3">
+                      Visa Application Submission
+                    </h3>
                     <p className="text-gray-600">
-                      We assist you in completing the online visa application form and submitting it along with all
-                      required documents.
+                      We assist you in completing the online visa application
+                      form and submitting it along with all required documents.
                     </p>
                   </div>
                 </div>
@@ -251,10 +291,12 @@ export default function VisaServicesPage() {
                     </div>
                   </div>
                   <div className="md:col-span-6 bg-white p-6 rounded-xl shadow-lg border-l-4 border-secondary">
-                    <h3 className="text-xl font-bold mb-3">Biometrics & Health Check</h3>
+                    <h3 className="text-xl font-bold mb-3">
+                      Biometrics & Health Check
+                    </h3>
                     <p className="text-gray-600">
-                      If required, we guide you through the process of providing biometrics and completing health
-                      examinations.
+                      If required, we guide you through the process of providing
+                      biometrics and completing health examinations.
                     </p>
                   </div>
                 </div>
@@ -267,8 +309,8 @@ export default function VisaServicesPage() {
                   <div className="md:col-span-6 bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary">
                     <h3 className="text-xl font-bold mb-3">Visa Decision</h3>
                     <p className="text-gray-600">
-                      We monitor your application status and keep you updated throughout the process until a decision is
-                      made.
+                      We monitor your application status and keep you updated
+                      throughout the process until a decision is made.
                     </p>
                   </div>
                 </div>
@@ -278,18 +320,7 @@ export default function VisaServicesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-primary text-white">
-        <div className="container text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Start Your Visa Application?</h2>
-          <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
-            Contact us today for expert guidance and increase your chances of a successful visa application.
-          </p>
-          <Button asChild size="xl" variant="white" className="shadow-md">
-            <Link href="/contact">Book a Free Consultation</Link>
-          </Button>
-        </div>
-      </section>
+      <BookFreeConsultationFooter />
     </>
-  )
+  );
 }

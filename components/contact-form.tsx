@@ -1,36 +1,49 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { toast } from "@/components/ui/use-toast"
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { toast } from "@/components/ui/use-toast";
 
 export function ContactForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
-    setIsSubmitting(false)
+    setIsSubmitting(false);
     toast({
       title: "Form submitted successfully!",
       description: "We'll get back to you as soon as possible.",
-    })
+    });
 
     // Reset form
-    e.currentTarget.reset()
-  }
+    e.currentTarget.reset();
+  };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      className="space-y-6">
+      <input
+        type="hidden"
+        name="access_key"
+        value="3b29dbb8-16a3-497c-ad04-217ef4a36870"></input>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">
           <Label htmlFor="firstName">First Name</Label>
@@ -56,12 +69,22 @@ export function ContactForm() {
             <SelectValue placeholder="Select a service" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="education-counseling">Education Counseling</SelectItem>
-            <SelectItem value="university-admissions">University Admissions</SelectItem>
+            <SelectItem value="education-counseling">
+              Education Counseling
+            </SelectItem>
+            <SelectItem value="university-admissions">
+              University Admissions
+            </SelectItem>
             <SelectItem value="visa-application">Visa Application</SelectItem>
-            <SelectItem value="scholarship-guidance">Scholarship Guidance</SelectItem>
-            <SelectItem value="pre-departure-briefing">Pre-Departure Briefing</SelectItem>
-            <SelectItem value="accommodation">Accommodation Assistance</SelectItem>
+            <SelectItem value="scholarship-guidance">
+              Scholarship Guidance
+            </SelectItem>
+            <SelectItem value="pre-departure-briefing">
+              Pre-Departure Briefing
+            </SelectItem>
+            <SelectItem value="accommodation">
+              Accommodation Assistance
+            </SelectItem>
           </SelectContent>
         </Select>
       </div>
@@ -73,26 +96,27 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="inline-flex justify-center items-center rounded-lg bg-secondary text-white px-6 py-3 text-sm font-medium hover:bg-secondary/90 transition-colors w-full disabled:opacity-50 disabled:pointer-events-none"
-        >
+          className="inline-flex justify-center items-center rounded-lg bg-secondary text-white px-6 py-3 text-sm font-medium hover:bg-secondary/90 transition-colors w-full disabled:opacity-50 disabled:pointer-events-none">
           {isSubmitting ? "Submitting..." : "Submit"}
         </button>
         <button
           type="reset"
-          className="inline-flex justify-center items-center rounded-lg bg-gray-200 text-gray-800 px-6 py-3 text-sm font-medium hover:bg-gray-300 transition-colors w-full"
-        >
+          className="inline-flex justify-center items-center rounded-lg bg-gray-200 text-gray-800 px-6 py-3 text-sm font-medium hover:bg-gray-300 transition-colors w-full">
           Cancel
         </button>
         <button
           type="button"
           className="inline-flex justify-center items-center rounded-lg bg-white text-gray-800 border border-gray-200 px-6 py-3 text-sm font-medium hover:bg-gray-50 transition-colors w-full"
           onClick={() =>
-            toast({ title: "Help", description: "Need assistance? Contact us at info@skippyeducation.com" })
-          }
-        >
+            toast({
+              title: "Help",
+              description:
+                "Need assistance? Contact us at info@skippyeducation.com",
+            })
+          }>
           Help
         </button>
       </div>
     </form>
-  )
+  );
 }

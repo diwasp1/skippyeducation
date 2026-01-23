@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/improved-header";
 import { Footer } from "@/components/footer";
+import BookFreeConsultationFooter from "@/components/BookFreeConsultationFooter";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
