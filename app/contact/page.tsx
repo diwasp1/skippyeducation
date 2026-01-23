@@ -142,14 +142,26 @@ export default function ContactPage() {
                     </a>
                   </div>
                 </div>
+                <div className="mt-5 flex flex-col">
+                  <h1 className="text-xl text-primary font-medium text-center mb-4">
+                    {" "}
+                    Visit Our Office
+                  </h1>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.530421665163!2d149.1083333764639!3d-35.21816387274032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b16532eb3e99d8f%3A0xd65930864e9114f0!2s115%20Onkaparinga%20Cres%2C%20Kaleen%20ACT%202617%2C%20Australia!5e0!3m2!1sen!2snp!4v1769182551150!5m2!1sen!2snp"
+                    width="100%"
+                    style={{ borderRadius: "10px" }}
+                    height="450"
+                    loading="lazy"></iframe>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Map Section  */}
+      {/* <section className="py-16 bg-gray-50">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Visit Our Office</h2>
@@ -171,7 +183,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container">
           <div className="text-center mb-12">
@@ -226,7 +237,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

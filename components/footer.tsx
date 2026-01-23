@@ -1,6 +1,13 @@
-import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react"
-import Image from "next/image"
+import Link from "next/link";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -8,101 +15,112 @@ export function Footer() {
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="space-y-4">
-          <div className="flex items-center space-x-2">
-          <Link href="/">
-  <img
-    src="/images/logo6.png"
-    alt="Skippy Education and Visa Services"
-    className="h-20 w-auto cursor-pointer"
-  />
-</Link>
-
-
-</div>
+            <div className="flex items-center space-x-2">
+              <Link href="/">
+                <img
+                  src="/images/logo4.png"
+                  alt="Skippy Education and Visa Services"
+                  className="h-20 w-auto cursor-pointer"
+                />
+              </Link>
+            </div>
             <p className="text-sm text-gray-600 max-w-xs">
-              Your trusted partner for education and visa consultancy services in Australia.
+              Your trusted partner for education and visa consultancy services
+              in Australia.
             </p>
             <div className="flex space-x-4">
-  <a
-    href="https://www.facebook.com/skippyeducation"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-gray-600 hover:text-primary"
-  >
-    <Facebook className="h-5 w-5" />
-    <span className="sr-only">Facebook</span>
-  </a>
+              <a
+                href="https://www.facebook.com/skippyeducation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary">
+                <Facebook className="h-5 w-5" />
+                <span className="sr-only">Facebook</span>
+              </a>
 
-  <a
-    href="https://instagram.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-gray-600 hover:text-primary"
-  >
-    <Instagram className="h-5 w-5" />
-    <span className="sr-only">Instagram</span>
-  </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary">
+                <Instagram className="h-5 w-5" />
+                <span className="sr-only">Instagram</span>
+              </a>
 
-  <a
-    href="https://linkedin.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-gray-600 hover:text-primary"
-  >
-    <Linkedin className="h-5 w-5" />
-    <span className="sr-only">LinkedIn</span>
-  </a>
-</div>
-
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary">
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
+            </div>
           </div>
           <div>
             <h3 className="font-semibold text-lg mb-4">Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-sm text-gray-600 hover:text-primary">
+                <Link
+                  href="/"
+                  className="text-sm text-gray-600 hover:text-primary">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-sm text-gray-600 hover:text-primary">
+                <Link
+                  href="/about"
+                  className="text-sm text-gray-600 hover:text-primary">
                   Our Story
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-sm text-gray-600 hover:text-primary">
+                <Link
+                  href="/services"
+                  className="text-sm text-gray-600 hover:text-primary">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/study-in-australia" className="text-sm text-gray-600 hover:text-primary">
+                <Link
+                  href="/study-in-australia"
+                  className="text-sm text-gray-600 hover:text-primary">
                   Storybook
                 </Link>
               </li>
-             
+
               <li>
-                <Link href="/contact" className="text-sm text-gray-600 hover:text-primary">
+                <Link
+                  href="/contact"
+                  className="text-sm text-gray-600 hover:text-primary">
                   Contact Us
                 </Link>
               </li>
             </ul>
           </div>
-      
+
           <div>
             <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                <span className="text-sm text-gray-600">115 Onkaparinga Cres, Canberra, ACT 2617, Australia</span>
+                <span className="text-sm text-gray-600">
+                  115 Onkaparinga Cres, Canberra, ACT 2617, Australia
+                </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-primary mr-2" />
-                <Link href="tel:+61234567890" className="text-sm text-gray-600 hover:text-primary">
-                +61 450 900 828
+                <Link
+                  href="tel:+61234567890"
+                  className="text-sm text-gray-600 hover:text-primary">
+                  +61 450 900 828
                 </Link>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-primary mr-2" />
-                <Link href="mailto:info@skippyeducation.com" className="text-sm text-gray-600 hover:text-primary">
+                <Link
+                  href="mailto:info@skippyeducation.com"
+                  className="text-sm text-gray-600 hover:text-primary">
                   info@skippyeducation.com
                 </Link>
               </li>
@@ -116,5 +134,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
