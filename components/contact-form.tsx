@@ -70,13 +70,31 @@ export default function ConsultationForm() {
       const result = await response.json();
 
       if (result.success) {
-        toast.success("We have received your message. Thank you!");
+        toast.success("We have received your message. Thank you!", {
+          position: "bottom-right",
+          autoClose: 4000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          progress: undefined,
+          theme: "light",
+        });
         form.reset();
       } else {
         throw new Error("Submission failed");
       }
     } catch (error) {
-      toast.error("Error submitting the form. Please try again later.");
+      toast.error("Error submitting the form. Please try again later.", {
+        position: "bottom-right",
+        autoClose: 4000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
+      });
     }
   }
 
