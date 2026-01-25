@@ -1,9 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { CheckCircle, Users, Trophy, Target } from "lucide-react";
-import BookingDialog from "@/components/Cal.com";
-import BookFreeConsultationFooter from "@/components/BookFreeConsultationFooter";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Skippy Education | Our Story - Education & Visa Consultancy in Australia",
+  description:
+    "Skippy Education provides expert guidance for international students seeking education opportunities and visa services in Australia.",
+  generator: "v0.dev",
+};
 
 export default function AboutPage() {
   return (
@@ -21,7 +27,6 @@ export default function AboutPage() {
         {/* Blue overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#041e3a]/60 to-[#041e3a]/40 " />
 
-        {/* Content */}
         <div className="absolute inset-0 flex items-end">
           <div className="container pb-20 md:pb-28">
             <div className="mx-auto max-w-4xl text-center">

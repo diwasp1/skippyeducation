@@ -15,6 +15,15 @@ import { studentsStudyingImage, graduationImage, campusImage } from "../images";
 import BookFreeConsultationFooter from "@/components/BookFreeConsultationFooter";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Skippy Education | Services - Education & Visa Consultancy in Australia",
+  description:
+    "Skippy Education provides expert guidance for international students seeking education opportunities and visa services in Australia.",
+  generator: "v0.dev",
+};
 
 export default function ServicesPage() {
   return (

@@ -10,12 +10,19 @@ import {
   Linkedin,
 } from "lucide-react";
 import ConsultationForm from "@/components/contact-form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Skippy Education | Contact Us - Education & Visa Consultancy in Australia",
+  description:
+    "Skippy Education provides expert guidance for international students seeking education opportunities and visa services in Australia.",
+  generator: "v0.dev",
+};
 
 export default function ContactPage() {
   return (
     <>
-      {/* Hero Section */}
-
       <section className="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2000&auto=format&fit=crop"

@@ -4,6 +4,15 @@ import { CheckCircle, BookOpen, FileText, Clock, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { campusImage, graduationImage } from "../../images";
 import BookFreeConsultationFooter from "@/components/BookFreeConsultationFooter";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Skippy Education | University Admissions - Education & Visa Consultancy in Australia",
+  description:
+    "Skippy Education provides expert guidance for international students seeking education opportunities and visa services in Australia.",
+  generator: "v0.dev",
+};
 
 export default function UniversityAdmissionsPage() {
   return (

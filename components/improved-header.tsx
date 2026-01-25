@@ -140,9 +140,7 @@ export function Header() {
               Contact Us
             </Link>
             <Button asChild variant="secondary" className="mt-2 uppercase">
-              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                Book Consultation
-              </Link>
+              <BookingDialog />
             </Button>
           </div>
         </div>
