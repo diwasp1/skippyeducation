@@ -40,7 +40,7 @@ const linkData = [
     text: "Services",
   },
   {
-    href: "/study-in-australia",
+    href: "/story-book",
     text: "Storybook",
   },
   {
@@ -127,7 +127,7 @@ export function Header() {
               Services
             </Link>
             <Link
-              href="/study-in-australia"
+              href="/story-book"
               className="text-sm font-medium uppercase tracking-wide transition-colors hover:text-[#041e3a]"
               onClick={() => setIsMenuOpen(false)}>
               Storybook

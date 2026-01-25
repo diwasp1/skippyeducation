@@ -69,7 +69,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="/our-story"
                   className="text-sm text-gray-600 hover:text-primary">
                   Our Story
                 </Link>
@@ -83,7 +83,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/study-in-australia"
+                  href="/story-book"
                   className="text-sm text-gray-600 hover:text-primary">
                   Storybook
                 </Link>
