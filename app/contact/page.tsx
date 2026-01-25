@@ -84,9 +84,9 @@ export default function ContactPage() {
                       <h4 className="font-semibold mb-1">Phone</h4>
                       <p className="text-gray-600">
                         <Link
-                          href="tel:+61234567890"
+                          href="tel:+61433618691"
                           className="hover:text-primary">
-                          +61 424 801 842
+                          +61 433 618 691
                         </Link>
                       </p>
                     </div>
@@ -131,7 +131,7 @@ export default function ContactPage() {
                     </a>
 
                     <a
-                      href="https://instagram.com"
+                      href="https://www.instagram.com/skippyeducation/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 hover:text-primary">
@@ -140,7 +140,7 @@ export default function ContactPage() {
                     </a>
 
                     <a
-                      href="https://linkedin.com"
+                      href="https://linkedin.com/company/skippyeducation"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 hover:text-primary">

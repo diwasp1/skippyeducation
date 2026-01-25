@@ -49,7 +49,7 @@ export default function HomePage() {
 
                 <ReusuableLinkButton
                   text="Learn More About Us"
-                  href="/about"
+                  href="/our-story"
                   color="white"
                 />
               </div>
@@ -226,7 +226,7 @@ export default function HomePage() {
                 </p>
                 <ReusuableLinkButton
                   text="Learn more"
-                  href="/study-in-australia"
+                  href="/story-book"
                   color="primary"
                 />
               </div>
@@ -253,7 +253,7 @@ export default function HomePage() {
 
                 <ReusuableLinkButton
                   text="Learn more"
-                  href="/study-in-australia"
+                  href="/story-book"
                   color="primary"
                 />
               </div>
@@ -279,7 +279,7 @@ export default function HomePage() {
                 </p>
                 <ReusuableLinkButton
                   text="Learn more"
-                  href="/study-in-australia"
+                  href="/story-book"
                   color="primary"
                 />
               </div>
@@ -288,7 +288,7 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <ReusuableLinkButton
               text="Explore All Study Destinations"
-              href="/study-in-australia"
+              href="/story-book"
               color="primary"
             />
           </div>

@@ -100,7 +100,7 @@ export default function BookingDialog({
                 // }
                 className="text-blue-500 hover:underline text-sm font-medium">
                 {view === "standard"
-                  ? "Free 30 mins with Registered Migration Agent"
+                  ? "Need Help or Guidance? We’re Available 24/7"
                   : "← Back to Standard Hours"}
               </button>
             </div>
