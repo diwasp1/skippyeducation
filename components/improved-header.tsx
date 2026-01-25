@@ -2,12 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import BookingDialog from "./Cal.com";
 import Link from "next/link";
@@ -25,6 +19,24 @@ const NavLink = ({
     <Link
       href={href}
       className={`text-sm font-medium uppercase tracking-wide transition-colors pb-1 hover:text-secondary ${active ? "border-b-2 border-primary " : ""}`}>
+      {text}
+    </Link>
+  );
+};
+
+const MobileNavLink = ({
+  href,
+  text,
+  active,
+}: {
+  href: string;
+  text: string;
+  active: boolean;
+}) => {
+  return (
+    <Link
+      href={href}
+      className={`text-sm font-medium uppercase tracking-wide transition-colors p-2  ${active ? "bg-secondary text-white rounded-md" : ""}`}>
       {text}
     </Link>
   );
@@ -114,31 +126,14 @@ export function Header() {
             isScrolled ? "bg-white text-[#041e3a]" : "bg-[#202A3E91] text-white"
           } backdrop-blur-sm`}>
           <div className="flex flex-col space-y-3 py-4">
-            <Link
-              href="/our-story"
-              className="text-sm font-medium uppercase tracking-wide transition-colors hover:text-[#041e3a]"
-              onClick={() => setIsMenuOpen(false)}>
-              Our Story
-            </Link>
-            <Link
-              href="/services"
-              className="text-sm font-medium uppercase tracking-wide transition-colors hover:text-[#041e3a]"
-              onClick={() => setIsMenuOpen(false)}>
-              Services
-            </Link>
-            <Link
-              href="/story-book"
-              className="text-sm font-medium uppercase tracking-wide transition-colors hover:text-[#041e3a]"
-              onClick={() => setIsMenuOpen(false)}>
-              Storybook
-            </Link>
-
-            <Link
-              href="/contact"
-              className="text-sm font-medium uppercase tracking-wide transition-colors hover:text-[#041e3a]"
-              onClick={() => setIsMenuOpen(false)}>
-              Contact Us
-            </Link>
+            {linkData.map((link) => (
+              <MobileNavLink
+                key={link.href}
+                href={link.href}
+                text={link.text}
+                active={pathname.startsWith(link.href)}
+              />
+            ))}
             <Button asChild variant="secondary" className="mt-2 uppercase">
               <BookingDialog />
             </Button>
