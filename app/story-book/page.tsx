@@ -16,7 +16,7 @@ export default function StudyInAustraliaPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+      <section className="relative h-[60vh]  max-sm:h-[450px] min-h-[400px] w-full overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2000&auto=format&fit=crop"
           alt="Sydney Opera House and Harbor"
@@ -162,7 +162,7 @@ export default function StudyInAustraliaPage() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-secondary hover:shadow-xl transition-shadow">
+            <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary hover:shadow-xl transition-shadow">
               <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4">
                 <Building className="h-6 w-6 text-secondary" />
               </div>
@@ -320,7 +320,7 @@ export default function StudyInAustraliaPage() {
             </div>
           </div>
           <div className="text-center mt-10">
-            <Button asChild variant="outline" size="lg">
+            <Button asChild className="max-sm:w-50" variant="outline" size="lg">
               <Link href="/study-in-australia">
                 Explore All Study Destinations
               </Link>

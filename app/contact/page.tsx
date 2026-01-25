@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+      <section className="relative h-[60vh]  max-sm:h-[450px] min-h-[400px] w-full overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2000&auto=format&fit=crop"
           alt="Sydney Opera House and Harbor"

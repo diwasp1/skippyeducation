@@ -15,28 +15,23 @@ import { Button } from "@/components/ui/button";
 import { ServiceCard } from "@/components/service-card";
 import { TestimonialCard } from "@/components/testimonial-card";
 import BookingDialog from "@/components/Cal.com";
-import ReusuableButton from "@/components/ReusuableButton";
 import ReusuableLinkButton from "@/components/ReusuableButton";
 import BookFreeConsultationFooter from "@/components/BookFreeConsultationFooter";
 
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section */}
-      {/* Hero Section */}
-      <section className="relative h-[85vh] min-h-[600px] w-full overflow-hidden">
+      <section className="relative max-sm:h-[450px] sm:min-h-[700px] xl:h-[85vh]  md:min-h-[450px] w-full overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2000&auto=format&fit=crop"
           alt="Sydney Opera House and Harbor"
           fill
-          className="object-cover brightness-[1.1]"
+          className="object-cover brightness-[1.1] "
           priority
         />
 
-        {/* Blue overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#041e3a]/60 to-[#041e3a]/40 " />
 
-        {/* Content */}
         <div className="absolute inset-0 flex items-end">
           <div className="container pb-20 md:pb-28">
             <div className="mx-auto max-w-4xl text-center">
@@ -63,10 +58,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About Section */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold mb-6 text-primary">
                 Skippy Education and Visa Services
@@ -89,7 +83,7 @@ export default function HomePage() {
                 color="primary"
               />
             </div>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary hover:shadow-xl transition-shadow">
                 <Globe className="h-8 w-8 text-primary mb-3" />
                 <h3 className="font-semibold text-xl mb-2">
