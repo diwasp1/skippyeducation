@@ -22,13 +22,22 @@ export default function HomePage() {
   return (
     <>
       <section className="relative max-sm:h-[450px] sm:min-h-[700px] xl:h-[85vh]  md:min-h-[450px] w-full overflow-hidden">
-        <Image
+        {/* <Image
           src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2000&auto=format&fit=crop"
           alt="Sydney Opera House and Harbor"
           fill
           className="object-cover brightness-[1.1] "
           priority
-        />
+        /> */}
+
+<video
+    src="/videos/herovideo.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover brightness-[1.1]"
+  />
 
         <div className="absolute inset-0 bg-gradient-to-b from-[#041e3a]/60 to-[#041e3a]/40 " />
 
