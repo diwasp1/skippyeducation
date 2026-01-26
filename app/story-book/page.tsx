@@ -72,7 +72,7 @@ export default function StudyInAustraliaPage() {
 
               <div className="mt-6">
                 <Link
-                  href="/study-in-australia"
+                  href="/story-book"
                   className="uppercase border-b-2 border-[#041e3a] text-[#041e3a]  pb-1 text-md font-medium tracking-wide  hover:border-[#041e3a] transition">
                   Read More
                 </Link>
@@ -108,7 +108,7 @@ export default function StudyInAustraliaPage() {
 
               <div className="mt-6">
                 <Link
-                  href="/study-in-australia"
+                  href="/story-book"
                   className="uppercase border-b-2 border-[#041e3a] text-[#041e3a]  pb-1 text-md font-medium tracking-wide  hover:border-[#041e3a] transition">
                   Read More
                 </Link>
@@ -321,7 +321,7 @@ export default function StudyInAustraliaPage() {
           </div>
           <div className="text-center mt-10">
             <Button asChild className="max-sm:w-50" variant="outline" size="lg">
-              <Link href="/study-in-australia">
+              <Link href="/story-book">
                 Explore All Study Destinations
               </Link>
             </Button>

@@ -15,7 +15,7 @@ export default function BookingDialog({
   btnVarient = "ghost",
   noButton = false,
   isScrolled = false,
-  btnText = "Book Consultation",
+  btnText = "BOOK CONSULTATION",
 }: {
   btnVarient?:
     | "primary"
@@ -66,7 +66,7 @@ export default function BookingDialog({
             handleSwitchView("standard");
             setIsOpen(true);
           }}
-          className={`text-lg ${btnVarient ? "" : isScrolled ? "text-primary" : "text-white"} transition-all  hover:scale-105 duration-200`}>
+          className={`text-md ${btnVarient ? "" : isScrolled ? "text-primary" : "text-white"} transition-all  hover:scale-105 duration-200`}>
           {btnText}
         </Button>
       ) : (
@@ -76,7 +76,7 @@ export default function BookingDialog({
             handleSwitchView("standard");
             setIsOpen(true);
           }}>
-          Book Consultation
+          Book a Free Consultation
         </p>
       )}
 
@@ -100,7 +100,7 @@ export default function BookingDialog({
                 // }
                 className="text-blue-500 hover:underline text-sm font-medium">
                 {view === "standard"
-                  ? "Free 30 mins with Registered Migration Agent"
+                  ? "Need Help or Guidance? We’re Available 24/7"
                   : "← Back to Standard Hours"}
               </button>
             </div>

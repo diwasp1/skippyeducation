@@ -39,7 +39,7 @@ export function Footer() {
               </a>
 
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/skippyeducation/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary">
@@ -48,7 +48,7 @@ export function Footer() {
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/company/skippyeducation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary">
@@ -111,9 +111,9 @@ export function Footer() {
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-primary mr-2" />
                 <Link
-                  href="tel:+61234567890"
+                  href="tel:+61433618691"
                   className="text-sm text-gray-600 hover:text-primary">
-                  +61 450 900 828
+                  +61 433 618 691
                 </Link>
               </li>
               <li className="flex items-center">

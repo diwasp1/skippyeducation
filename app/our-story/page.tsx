@@ -49,7 +49,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/images/ourstory.png"
                 alt="Skippy Education Office"
                 width={600}
                 height={600}
