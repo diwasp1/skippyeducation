@@ -107,7 +107,7 @@ export default function BookingDialog({
 
             <div className="flex w-full max-w-full bg-slate-50 rounded-md ">
               <Cal
-                calLink="skippyeducation/afterhourmeeting"
+                calLink="skippyeducation/24hr"
                 style={{ width: "100%", height: "100%", minWidth: "100%" }}
                 onLoad={(e) => console.log("loaded", e)}
                 config={{
