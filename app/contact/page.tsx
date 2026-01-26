@@ -32,10 +32,8 @@ export default function ContactPage() {
           priority
         />
 
-        {/* Blue overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#041e3a]/60 to-[#041e3a]/40 " />
 
-        {/* Content */}
         <div className="absolute inset-0 flex items-end">
           <div className="container pb-20 md:pb-28">
             <div className="mx-auto max-w-4xl text-center">
@@ -52,7 +50,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="py-16 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
