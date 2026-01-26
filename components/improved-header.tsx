@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import BookingDialog from "./Cal.com";
@@ -25,16 +25,19 @@ const NavLink = ({
 };
 
 const MobileNavLink = ({
+  onClick,
   href,
   text,
   active,
 }: {
+  onClick: () => void;
   href: string;
   text: string;
   active: boolean;
 }) => {
   return (
     <Link
+      onClick={onClick}
       href={href}
       className={`text-sm font-medium uppercase tracking-wide transition-colors p-2  ${active ? "bg-secondary text-white rounded-md" : ""}`}>
       {text}
@@ -65,10 +68,8 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const menuRef = useRef(null);
 
-  console.log("Current pathname:", pathname);
-
-  // Track scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -76,6 +77,32 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  interface UseOutsideClickRef {
+    current: HTMLElement | null;
+  }
+
+  function useOutsideClick(
+    ref: UseOutsideClickRef,
+    callback: () => void,
+  ): void {
+    useEffect(() => {
+      function handleClickOutside(event: MouseEvent): void {
+        if (ref.current && !ref.current.contains(event.target as Node)) {
+          callback();
+        }
+      }
+
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref, callback]);
+  }
+
+  useOutsideClick(menuRef, () => {
+    if (isMenuOpen) setIsMenuOpen(false);
+  });
 
   return (
     <header
@@ -124,7 +151,8 @@ export function Header() {
         <div
           className={`container lg:hidden ${
             isScrolled ? "bg-white text-[#041e3a]" : "bg-[#202A3E91] text-white"
-          } backdrop-blur-sm`}>
+          } backdrop-blur-sm`}
+          ref={menuRef}>
           <div className="flex flex-col space-y-3 py-4">
             {linkData.map((link) => (
               <MobileNavLink
@@ -132,6 +160,7 @@ export function Header() {
                 href={link.href}
                 text={link.text}
                 active={pathname.startsWith(link.href)}
+                onClick={() => setIsMenuOpen(false)}
               />
             ))}
             <Button asChild variant="secondary" className="mt-2 uppercase">
