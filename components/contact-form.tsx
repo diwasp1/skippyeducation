@@ -34,11 +34,11 @@ const formSchema = z.object({
     .string()
     .max(15, "Phone number must be at most 10 characters long")
     .optional(),
-  service: z.string({
+  serviceInterested: z.string({
     required_error: "Please select a service.",
   }),
   message: z.string().min(10, "Message must be at least 10 characters"),
-  country: z.string(),
+  currentlyLiving: z.string(),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -52,7 +52,7 @@ export default function ConsultationForm() {
       lastName: "",
       email: "",
       phone: "",
-      service: "",
+      serviceInterested: "",
       message: "",
     },
   });
@@ -165,7 +165,7 @@ export default function ConsultationForm() {
 
         <FormField
           control={form.control}
-          name="country"
+          name="currentlyLiving"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Currently Living On</FormLabel>
@@ -179,7 +179,7 @@ export default function ConsultationForm() {
 
         <FormField
           control={form.control}
-          name="service"
+          name="serviceInterested"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Service Interested In</FormLabel>
