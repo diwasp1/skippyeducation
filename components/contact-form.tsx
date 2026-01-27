@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -24,6 +23,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { toast } from "react-toastify";
+import { PhoneInput } from "./PhoneInput";
+import { CountrySelect } from "./AllCountry";
 
 const formSchema = z.object({
   access_key: z.string(),
@@ -35,6 +36,7 @@ const formSchema = z.object({
     required_error: "Please select a service.",
   }),
   message: z.string().min(10, "Message must be at least 10 characters"),
+  country: z.string(),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -100,7 +102,6 @@ export default function ConsultationForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        {/* Hidden Access Key */}
         <input type="hidden" {...form.register("access_key")} />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -151,9 +152,23 @@ export default function ConsultationForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Phone</FormLabel>
+              <FormLabel>Phone Number</FormLabel>
               <FormControl>
-                <Input type="tel" placeholder="+1..." {...field} />
+                <PhoneInput {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="country"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Currently Living On</FormLabel>
+              <FormControl>
+                <CountrySelect {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
