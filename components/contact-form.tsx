@@ -3,7 +3,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-
 import {
   Form,
   FormControl,
@@ -31,7 +30,10 @@ const formSchema = z.object({
   firstName: z.string().min(2, "First name is required"),
   lastName: z.string().min(2, "Last name is required"),
   email: z.string().email("Invalid email address"),
-  phone: z.string().optional(),
+  phone: z
+    .string()
+    .max(15, "Phone number must be at most 10 characters long")
+    .optional(),
   service: z.string({
     required_error: "Please select a service.",
   }),
