@@ -108,12 +108,16 @@ export function Header() {
     <header
       className={`
         w-full top-0 left-0 z-50 transition-all duration-300
-        ${isScrolled ? "fixed bg-white text-primary shadow-md" : "absolute text-white"}
+        ${isScrolled || pathname !== "/" ? "fixed bg-white text-primary shadow-md" : "absolute text-white"}
       `}>
       <div className="container flex h-20 items-center justify-between">
         <Link href="/">
           <img
-            src={isScrolled ? "/images/logo4.png" : "/images/logo6.png"}
+            src={
+              isScrolled || pathname !== "/"
+                ? "/images/logo4.png"
+                : "/images/logo6.png"
+            }
             alt="Skippy Education and Visa Services"
             className="h-14 w-auto cursor-pointer transition-all duration-300 "
           />

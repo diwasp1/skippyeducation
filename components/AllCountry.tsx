@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/popover";
 
 interface CountrySelectProps {
-  value?: string; // Expects country code (e.g., "AU")
+  value?: string;
   onChange: (value: string) => void;
   placeholder?: string;
 }

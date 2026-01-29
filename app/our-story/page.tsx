@@ -14,37 +14,24 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative h-[60vh] max-sm:h-[450px] min-h-[400px] w-full overflow-hidden">
-        <Image
-          src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2000&auto=format&fit=crop"
-          alt="Sydney Opera House and Harbor"
-          fill
-          className="object-cover brightness-[1.1] "
-          priority
-        />
-
-        {/* Blue overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#041e3a]/60 to-[#041e3a]/40 " />
-
-        <div className="absolute inset-0 flex items-end">
+      <section className="">
+        <div className="bg-gradient-to-b from-[#041e3a]/60 to-[#041e3a]/40 mt-40 " />
+        <div className="flex items-end">
           <div className="container pb-20 md:pb-28">
             <div className="mx-auto max-w-4xl text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                About Skippy Education
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
+                Our Story
               </h1>
 
-              <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto">
-                Your trusted partner for education and visa consultancy services
-                in Australia.
+              <p className="text-lg md:text-xl text-primary mb-6 max-w-2xl mx-auto capitalize">
+                Know Why we Started & How we can Help you
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Story Section */}
-      <section className="py-16 bg-white">
+      <section className="pb-16 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
