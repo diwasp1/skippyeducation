@@ -44,23 +44,41 @@ export default function HomePage() {
         <div className="absolute inset-0 flex items-end">
           <div className="container pb-20 md:pb-28">
             <div className="mx-auto max-w-4xl text-center">
-              <h1 className="text-2xl md:text-4xl  font-bold text-white leading-tight mb-4">
+              <h1 className="hidden md:block text-2xl md:text-4xl  font-bold text-white leading-tight mb-4">
                 Your Journey to Australian Education Starts Here
               </h1>
 
-              <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto">
+              <p className="hidden md:block text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto">
                 Expert guidance for international students seeking quality
                 education and visa services in Australia.
               </p>
 
-              <div className="flex justify-center gap-6">
+              <div className="flex flex-col md:flex-row justify-center gap-6">
                 <BookingDialog noButton={true} />
 
-                {/* <ReusuableLinkButton
-                  text="Learn More About Us"
-                  href="/our-story"
-                  color="white"
-                /> */}
+                <a
+  href="https://wa.me/61433618691"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    uppercase cursor-pointer
+    px-6 py-3
+    text-white text-md font-medium tracking-wide
+    rounded-xl
+    bg-white/15
+    backdrop-blur-md
+    border border-white/30
+    shadow-lg shadow-black/10
+    hover:bg-white/25
+    hover:shadow-xl
+    transition-all duration-300
+    inline-flex items-center justify-center gap-2
+    hover:border-white/60
+    
+  "
+>
+  Chat on WhatsApp
+</a>
               </div>
             </div>
           </div>

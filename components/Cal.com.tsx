@@ -70,14 +70,37 @@ export default function BookingDialog({
           {btnText}
         </Button>
       ) : (
-        <p
-          className={`uppercase border-b-2 cursor-pointer border-white text-white pb-1 text-md font-medium tracking-wide hover:font-bold  transition-all duration-100`}
-          onClick={() => {
-            handleSwitchView("standard");
-            setIsOpen(true);
-          }}>
-          Book a Free Consultation
-        </p>
+        // <p
+        //   className={`uppercase border-b-2 cursor-pointer border-white text-white pb-1 text-md font-medium tracking-wide hover:font-bold  transition-all duration-100`}
+        //   onClick={() => {
+        //     handleSwitchView("standard");
+        //     setIsOpen(true);
+        //   }}>
+        //   Book a Free Consultation
+        // </p>
+<p
+  className="
+    uppercase cursor-pointer
+    px-6 py-3
+    text-white text-md font-medium tracking-wide
+    rounded-xl
+    bg-white/15
+    backdrop-blur-md
+    border border-white/30
+    shadow-lg shadow-black/10
+    hover:bg-white/25
+    hover:shadow-xl
+    transition-all duration-300
+    hover:border-white/60
+  "
+  onClick={() => {
+    handleSwitchView("standard");
+    setIsOpen(true);
+  }}
+>
+  Book a Free Consultation
+</p>
+
       )}
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>

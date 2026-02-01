@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/improved-header";
 import { Footer } from "@/components/footer";
 import { ToastContainer } from "react-toastify";
+import { MobileNav } from "@/components/MobileNav";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -37,6 +38,11 @@ export default function RootLayout({
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
+
+             {/* Mobile app-style bottom nav */}
+  <div className="md:hidden">
+    <MobileNav />
+  </div>
           </div>
         </ThemeProvider>
         <ToastContainer />
