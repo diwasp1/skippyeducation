@@ -54,7 +54,7 @@ export function Header() {
             Contact
           </Link>
         </nav>
-        <div className="hidden md:block">
+        <div className="">
           <BookingDialog />
           <Button asChild>
             <Link href="/contact">Book a Consultation</Link>

@@ -14,24 +14,8 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="">
-        <div className="bg-gradient-to-b from-[#041e3a]/60 to-[#041e3a]/40 mt-40 " />
-        <div className="flex items-end">
-          <div className="container pb-20 md:pb-28">
-            <div className="mx-auto max-w-4xl text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
-                Our Story
-              </h1>
 
-              <p className="text-lg md:text-xl text-primary mb-6 max-w-2xl mx-auto capitalize">
-                Know Why we Started & How we can Help you
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="pb-16 bg-white">
+      <section className="pb-16 bg-white mt-32">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
@@ -44,7 +28,7 @@ export default function AboutPage() {
               />
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-4">Our Story</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">Our Story</h2>
               <h3 className="text-xl font-bold mb-2">
                 A considered approach to education guidance.
               </h3>

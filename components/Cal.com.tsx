@@ -62,11 +62,12 @@ export default function BookingDialog({
       {!noButton ? (
         <Button
           variant={btnVarient}
+          size="sm"
           onClick={() => {
             handleSwitchView("standard");
             setIsOpen(true);
           }}
-          className={`text-md ${btnVarient ? "" : isScrolled ? "text-primary" : "text-white"} transition-all  hover:scale-105 duration-200`}>
+          className={`text-md ${btnVarient ? "" : isScrolled ? "text-primary" : "text-white"} transition-all  hover:scale-105  duration-200 bg-white/15 backdrop-blur-md border shadow-lg shadow-black/10 hover:bg-white/15  hover:shadow-xl`}>
           {btnText}
         </Button>
       ) : (

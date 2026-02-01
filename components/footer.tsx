@@ -58,15 +58,8 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-lg mb-4">Links</h3>
+            <h3 className="font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/"
-                  className="text-sm text-gray-600 hover:text-primary">
-                  Home
-                </Link>
-              </li>
               <li>
                 <Link
                   href="/our-story"
@@ -128,6 +121,14 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t mt-12 pt-6">
+          <p className="text-sm text-gray-600 pb-2">
+          <strong>Acknowledgement of Country:</strong> Skippy Education and Visa Services Pty. Ltd. acknowledges the Traditional Custodians of the land across Australia and respects their cultures and Elders, past, present, and emerging.
+          </p>
+          <p className="text-sm text-gray-600">
+          <strong>Disclaimer:</strong> Information provided on this website is for general guidance only and does not constitute legal or migration advice. Education and visa requirements may change, and outcomes depend on individual circumstances. Skippy Education is not responsible for any loss arising from reliance on this information.
+          </p>
+        </div>
+        <div className="border-t mt-12 mb-12 lg:mb-0 pt-6">
           <p className="text-center text-sm text-gray-600">
             © 2026 Skippy Education. All rights reserved.
           </p>

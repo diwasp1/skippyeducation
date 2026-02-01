@@ -29,14 +29,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="">
-        {/* <Image
-          src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2000&auto=format&fit=crop"
-          alt="Sydney Opera House and Harbor"
-          fill
-          className="object-cover brightness-[1.1]"
-          priority
-        /> */}
+      {/* <section className="">
 
         <div className=" mt-32 " />
         <div className=" flex items-end">
@@ -53,15 +46,15 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Services Overview */}
-      <section className="pb-16 bg-white">
+      <section className="pb-16 mt-28 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h2 className="text-3xl font-bold mb-6">
-                Comprehensive Student Services
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+                Our Services
               </h2>
               <p className="text-gray-600 mb-4">
                 At Skippy Education, we understand that studying abroad is a
@@ -91,9 +84,9 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Service Offerings</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+          <div className="lg:text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Service Offerings</h2>
+            <p className="text-gray-600 max-w-2xl lg:mx-auto">
               Explore our comprehensive range of services designed to support
               your educational journey in Australia.
             </p>
@@ -127,31 +120,31 @@ export default function ServicesPage() {
               title="Pre-Departure Briefing"
               description="Comprehensive briefing to prepare you for life and study in Australia, including cultural adaptation and practical tips."
               icon={Clock}
-              href="/services/pre-departure-briefing"
+              href="/services"
             />
             <ServiceCard
               title="Accommodation"
               description="Assistance in finding suitable accommodation options in Australia, including on-campus housing and private rentals."
               icon={Home}
-              href="/services/accommodation"
+              href="/services"
             />
             <ServiceCard
               title="Financial Guidance"
               description="Advice on tuition fees, living expenses, and financial planning to help you budget for your studies in Australia."
               icon={FileText}
-              href="/services/financial-guidance"
+              href="/services"
             />
             <ServiceCard
               title="Course Selection"
               description="Expert advice on choosing the right course that aligns with your career goals and academic background."
               icon={Lightbulb}
-              href="/services/course-selection"
+              href="/services"
             />
             <ServiceCard
               title="Post-Arrival Support"
               description="Ongoing support after you arrive in Australia to help you settle in and navigate your new environment."
               icon={Globe}
-              href="/services/post-arrival-support"
+              href="/services"
             />
           </div>
         </div>
@@ -162,7 +155,7 @@ export default function ServicesPage() {
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-3xl font-bold mb-6">Education Counseling</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6">Education Counseling</h2>
               <p className="text-gray-600 mb-4">
                 Our education counseling service is the foundation of your
                 journey to study in Australia. We provide personalized guidance
@@ -300,9 +293,9 @@ export default function ServicesPage() {
       {/* Our Process Section */}
       <section className="py-16 bg-gray-50">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="lg:text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Process</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl lg:mx-auto">
               We follow a structured approach to ensure you receive the best
               guidance and support throughout your journey.
             </p>
@@ -443,11 +436,11 @@ export default function ServicesPage() {
       {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="lg:text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl lg:mx-auto">
               Find answers to common questions about our services and studying
               in Australia.
             </p>
@@ -509,7 +502,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <BookFreeConsultationFooter />
+      {/* <BookFreeConsultationFooter /> */}
     </>
   );
 }

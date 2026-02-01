@@ -40,7 +40,7 @@ export default function RootLayout({
             <Footer />
 
              {/* Mobile app-style bottom nav */}
-  <div className="md:hidden">
+  <div className="lg:hidden">
     <MobileNav />
   </div>
           </div>

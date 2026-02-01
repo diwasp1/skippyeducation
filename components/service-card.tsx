@@ -30,7 +30,7 @@ export function ServiceCard({
 
   return (
     <Card
-      className={`border-l-4 shadow-lg h-full transition-all hover:shadow-xl ${getColorClasses()}`}>
+      className={`border-b-4 shadow-lg h-full transition-all hover:shadow-xl ${getColorClasses()}`}>
       <CardContent className="p-6">
         <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-4 shadow-md">
           <Icon className="h-6 w-6" />

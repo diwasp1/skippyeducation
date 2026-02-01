@@ -23,18 +23,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section
+      {/* <section
         className=""
         about="Contact Us"
         aria-details="Skippy Education | Contact Us">
-        {/* <Image
-          src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2000&auto=format&fit=crop"
-          alt="Sydney Opera House and Harbor"
-          fill
-          className="object-cover brightness-[1.1]"
-          priority
-        /> */}
-
         <div className="mt-40" />
         <div className="">
           <div className="container pb-20 md:pb-28">
@@ -50,23 +42,25 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="pb-16 bg-white">
+      <section className=""
+        about="Contact Us"
+        aria-details="Skippy Education | Contact Us">
+        <div className="mt-28 md:40">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">Get in Touch</h2>
               <p className="text-gray-600 mb-8">
-                Have questions about studying in Australia? Want to book a
-                consultation? Fill out the form, and our team will get back to
+                Have questions about studying in Australia? Fill out the form, and our team will get back to
                 you as soon as possible.
               </p>
               <ConsultationForm />
             </div>
             <div>
               <div className="bg-gray-50 p-8 rounded-lg shadow-md h-full">
-                <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+                <h3 className="text-2xl md:text-3xl text-primary font-bold mb-6">Contact Information</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <MapPin className="h-6 w-6 text-primary mr-3 mt-0.5" />
@@ -80,7 +74,7 @@ export default function ContactPage() {
                   <div className="flex items-start">
                     <Phone className="h-6 w-6 text-primary mr-3 mt-0.5" />
                     <div>
-                      <h4 className="font-semibold mb-1">Phone</h4>
+                      <h4 className="font-semibold mb-1">Phone / WhatsApp</h4>
                       <p className="text-gray-600">
                         <Link
                           href="tel:+61433618691"
@@ -164,6 +158,8 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+        </div>
+       
       </section>
 
       {/* Map Section  */}

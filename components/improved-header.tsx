@@ -135,10 +135,10 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <div className="hidden lg:block">
+          <div className="">
             <BookingDialog isScrolled={isScrolled} />
           </div>
-          <button
+          {/* <button
             className="block lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu">
@@ -147,7 +147,7 @@ export function Header() {
             ) : (
               <Menu className="h-6 w-6" />
             )}
-          </button>
+          </button> */}
         </div>
       </div>
 

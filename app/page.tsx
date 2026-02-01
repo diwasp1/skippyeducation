@@ -44,7 +44,7 @@ export default function HomePage() {
         <div className="absolute inset-0 flex items-end">
           <div className="container pb-20 md:pb-28">
             <div className="mx-auto max-w-4xl text-center">
-              <h1 className="hidden md:block text-2xl md:text-4xl  font-bold text-white leading-tight mb-4">
+              <h1 className=" text-2xl md:text-4xl  font-bold text-white leading-tight mb-4">
                 Your Journey to Australian Education Starts Here
               </h1>
 
@@ -54,9 +54,12 @@ export default function HomePage() {
               </p>
 
               <div className="flex flex-col md:flex-row justify-center gap-6">
-                <BookingDialog noButton={true} />
-
-                <a
+                <div className="hidden md:block">
+                <BookingDialog noButton={true}  />
+                </div>
+          
+<div>
+<a
   href="https://wa.me/61433618691"
   target="_blank"
   rel="noopener noreferrer"
@@ -79,17 +82,19 @@ export default function HomePage() {
 >
   Chat on WhatsApp
 </a>
+</div>
+
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-10 md:py-20 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-primary">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
                 Skippy Education and Visa Services
               </h2>
               <p className="text-lg mb-4 text-gray-700">
@@ -106,12 +111,12 @@ export default function HomePage() {
               </p>
               <ReusuableLinkButton
                 text="Learn More About Us"
-                href="/about"
+                href="/our-story"
                 color="primary"
               />
             </div>
             <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary hover:shadow-xl transition-shadow">
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-b-4 border-primary hover:shadow-xl transition-shadow">
                 <Globe className="h-8 w-8 text-primary mb-3" />
                 <h3 className="font-semibold text-xl mb-2">
                   Global Perspective
@@ -121,7 +126,7 @@ export default function HomePage() {
                   knowledge
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary hover:shadow-xl transition-shadow">
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-b-4 border-primary hover:shadow-xl transition-shadow">
                 <BookMarked className="h-8 w-8 text-primary mb-3" />
                 <h3 className="font-semibold text-xl mb-2">
                   Certified Advisors
@@ -130,7 +135,7 @@ export default function HomePage() {
                   Qualified education and migration consultants
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary hover:shadow-xl transition-shadow">
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-b-4 border-primary hover:shadow-xl transition-shadow">
                 <Lightbulb className="h-8 w-8 text-primary mb-3" />
                 <h3 className="font-semibold text-xl mb-2">
                   Personalized Approach
@@ -139,7 +144,7 @@ export default function HomePage() {
                   Tailored guidance for your unique educational goals
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary hover:shadow-xl transition-shadow">
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-b-4 border-primary hover:shadow-xl transition-shadow">
                 <Award className="h-8 w-8 text-primary mb-3" />
                 <h3 className="font-semibold text-xl mb-2">
                   Quality Partnerships
@@ -154,13 +159,13 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 lg:py-20 bg-gray-50">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="lg:text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-gray-800">
               Our Services
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl lg:mx-auto">
               We provide comprehensive education and visa consultancy services
               to help you achieve your dreams of studying in Australia.
             </p>
@@ -220,7 +225,7 @@ export default function HomePage() {
       </section>
 
       {/* Destinations Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-gray-800">
@@ -320,16 +325,16 @@ export default function HomePage() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 md:py-20 bg-gray-50">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="lg:text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-gray-800">
               Why Choose Skippy Education
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl lg:mx-auto">
               We're committed to providing exceptional service and support
               throughout your educational journey.
             </p>
@@ -360,7 +365,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <BookFreeConsultationFooter />
+      {/* <BookFreeConsultationFooter /> */}
     </>
   );
 }
