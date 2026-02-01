@@ -67,7 +67,7 @@ export default function BookingDialog({
             handleSwitchView("standard");
             setIsOpen(true);
           }}
-          className={`text-md ${btnVarient ? "" : isScrolled ? "text-primary" : "text-white"} transition-all  hover:scale-105  duration-200 bg-white/15 backdrop-blur-md border shadow-lg shadow-black/10 hover:bg-white/15  hover:shadow-xl`}>
+          className={`text-sm ${btnVarient ? "" : isScrolled ? "text-primary" : "text-white"} transition-all  hover:scale-105  duration-200 bg-white/15 backdrop-blur-md border shadow-lg shadow-black/10 hover:bg-white/15  hover:shadow-xl`}>
           {btnText}
         </Button>
       ) : (
@@ -82,9 +82,9 @@ export default function BookingDialog({
 <p
   className="
     uppercase cursor-pointer
-    px-6 py-3
-    text-white text-md font-medium tracking-wide
-    rounded-xl
+    px-4 py-2
+    text-white text-sm font-medium tracking-wide
+    rounded-lg
     bg-white/15
     backdrop-blur-md
     border border-white/30
